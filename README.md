@@ -2,6 +2,11 @@
 
 A modern Learning Management System built with the MERN stack (MongoDB, Express.js, React, Node.js) that allows users to browse courses, enroll in them, and track their learning progress.
 
+## 🌐 Live Demo
+
+👉 [Visit Mini-LMS](#) *(https://mini-lms-intern.vercel.app/)*   
+
+
 ## 🚀 Features
 
 - **User Authentication**: Secure login and registration system
