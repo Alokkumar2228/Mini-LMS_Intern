@@ -29,6 +29,33 @@ A modern Learning Management System built with the MERN stack (MongoDB, Express.
 - Bcrypt for password hashing
 - CORS enabled
 
+
+
+## 📸 Screenshots
+
+### Landing Page
+![Landing Page](./screenshots/ui.png)
+*The main landing page showing available courses*
+
+### Login/Register
+![Authentication](./screenshots/login.png)
+![Authentication](./screenshots/register.png)
+
+
+*Secure authentication system featuring:*
+- User-friendly login and registration interfaces
+- JWT-based authentication
+- Password encryption and secure session management
+- Seamless enrollment access after authentication
+
+### User Dashboard
+![Dashboard](./screenshots/data.png)
+*Personal dashboard showing enrolled courses and progress*
+
+### Course Enrollment
+![Course Enrollment](./screenshots/enrollment.png)
+*Course enrollment process and confirmation*
+
 ## 📦 Installation
 
 ### Prerequisites
