@@ -86,6 +86,31 @@
     gap: 12px;
     z-index: 1000;
   }
+
+  .course-grid__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Adjust height as needed */
+}
+
+.course-grid__loading img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  animation: spin 1s linear infinite;
+}
+
+/* Optional spinner animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
   
   /* Profile Logo */
   .profile-logo {

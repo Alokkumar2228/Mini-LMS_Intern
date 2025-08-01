@@ -9,6 +9,7 @@ const AuthContextProvider = ({ children }) => {
   const [enrolledCourses, setEnrolledCourses] = useState([]); // list of courseIds
   const [userName, setUserName] = useState(localStorage.getItem("name") || "");
   const [enrollData ,setEnrollData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   
 
   const url="http://localhost:3000/api";
@@ -18,7 +19,8 @@ const AuthContextProvider = ({ children }) => {
   const getAllCourses = async () => {
     try {
 
-      const result = await await axios.get(`${url}/course`);;
+      const result = await await axios.get(`${url}/course`);
+      setIsLoading(false);
       setCourseData(result.data.courses);
     
     } catch (error) {
@@ -95,7 +97,7 @@ useEffect(() => {
 
 
   return (
-    <AuthContext.Provider value={{ auth, setAuth, courseData,handleEnroll ,url,token,setToken,enrolledCourses, setEnrolledCourses,fetchEnrolledCourses,userName,setUserName,enrollData,fetchProfileData}}>
+    <AuthContext.Provider value={{ auth, setAuth, courseData,handleEnroll ,url,token,setToken,enrolledCourses, setEnrolledCourses,fetchEnrolledCourses,userName,setUserName,enrollData, fetchProfileData ,isLoading}}>
       {children}
     </AuthContext.Provider>
   );

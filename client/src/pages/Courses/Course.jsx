@@ -3,6 +3,7 @@ import CourseCard from '../../component/Card/Card.jsx';
 import AuthContext from '../../context/Authcontext/AuthContext.js';
 import './Course.css';
 import { useNavigate } from 'react-router-dom';
+import assets from '../../assets/asset.js'
 
 
 const CourseGrid = ({ 
@@ -15,7 +16,7 @@ const CourseGrid = ({
   ...props 
 }) => {
 
-  const {auth,setToken,setAuth,setEnrolledCourses,enrolledCourses,userName,token,fetchProfileData} = useContext(AuthContext);
+  const {auth,setToken,setAuth,setEnrolledCourses,enrolledCourses,userName,token,fetchProfileData,isLoading} = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -74,13 +75,9 @@ const CourseGrid = ({
 
       {/* Course Grid */}
       <main className="course-grid__content">
-        {courses.length === 0 ? (
-          <div className="course-grid__empty-state">
-            <div className="course-grid__empty-icon">📚</div>
-            <h3 className="course-grid__empty-title">No courses available</h3>
-            <p className="course-grid__empty-description">
-              Check back later for new courses or contact support for assistance.
-            </p>
+        {isLoading ? (
+          <div className="course-grid__loading">
+            <img src={assets.loader} alt="Loading" />
           </div>
         ) : (
           <div className="course-grid__grid">
