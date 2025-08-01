@@ -20,6 +20,7 @@ const CourseCard = ({
   const handleEnrollClick = async(courseId,token) => {
     if(auth === "Login/Signup"){
       alert("Please login first");
+      return;
     }
     await handleEnroll(courseId,token);
     setEnrolledCourses(prev=>[...prev,courseId]);
