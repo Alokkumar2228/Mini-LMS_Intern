@@ -21,7 +21,6 @@ A modern Learning Management System built with the MERN stack (MongoDB, Express.
 ### Frontend
 - React 19.1.0
 - React Router DOM 7.7.1
-- React Bootstrap 2.10.10
 - Axios for API calls
 - React Icons
 - Context API for state management
