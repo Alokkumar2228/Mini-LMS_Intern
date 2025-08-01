@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://mini-lms-intern.onrender.com/api/$1"
+    }
+  ]
+}
