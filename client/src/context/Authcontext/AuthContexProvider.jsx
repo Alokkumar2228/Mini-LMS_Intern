@@ -12,14 +12,14 @@ const AuthContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   
 
-  const url="http://localhost:3000/api";
+  const url="https://mini-lms-intern.onrender.com";
 
 
 
   const getAllCourses = async () => {
     try {
 
-      const result = await await axios.get(`${url}/course`);
+      const result = await await axios.get(`${url}/api/course`);
       setIsLoading(false);
       setCourseData(result.data.courses);
     
@@ -30,7 +30,7 @@ const AuthContextProvider = ({ children }) => {
 
   const handleEnroll = async(courseId,token) =>{
     try {
-      const result = await axios.post(`${url}/enrollments`,{
+      const result = await axios.post(`${url}/api/enrollments`,{
         courseId,
         token
       })
@@ -46,7 +46,7 @@ const AuthContextProvider = ({ children }) => {
 
     const fetchEnrolledCourses = async (token) => {
     try {
-        const res = await axios.get(`${url}/enrollments/me`, {
+        const res = await axios.get(`${url}/api/enrollments/me`, {
         headers: {
             token: token
         }
@@ -63,7 +63,7 @@ const AuthContextProvider = ({ children }) => {
 
     const fetchProfileData = async (token) => {
         try {
-            const res = await axios.get(`${url}/enrollments/profile`, {
+            const res = await axios.get(`${url}/api/enrollments/profile`, {
                 headers: {
                     token: token
                 }
